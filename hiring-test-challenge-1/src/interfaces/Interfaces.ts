@@ -1,6 +1,3 @@
-import Message from '../domain/alien_grammar/Message';
-import Type from '../domain/alien_grammar/Type';
-
 export interface IMessage {
     hasBeenProcessed: boolean;
     leader: string;

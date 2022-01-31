@@ -33,8 +33,8 @@ async function loadMessages() {
     await callEndpoint('post', url, message);
   }
 
-  for (let i = 0; i < InvalidMessages.length; i += 1) {
-    const message = { message: InvalidMessages[i]};
+  for (let i = 0; i < InvalidWords.length; i += 1) {
+    const message = { message: InvalidWords[i]};
 
     await callEndpoint('post', url, message);
   }

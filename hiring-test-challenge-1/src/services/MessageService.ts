@@ -7,6 +7,7 @@ import {IMessage, IWordValidate, IUpdateMessage} from '../interfaces/Interfaces'
 import Word from '../domain/alien_grammar/Word';
 import Type from '../domain/alien_grammar/Type';
 import ServiceResponse from '../utils/ServiceResponse';
+import {pollAndDeleteMessagesFromSQS, sqsClient} from '../gateway/aws/SQS/sqsGateway';
 
 const MessageService = {
 
@@ -189,8 +190,7 @@ const MessageService = {
             }
         }
 
-    }
-
+    },
     
 }
 

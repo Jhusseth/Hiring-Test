@@ -10,9 +10,7 @@ const agent = new https.Agent({
   maxSockets: Infinity
 });
 // Credentials are loaded from enviroment variables by AWS SDK. (AWS_ACCESS_KEY_ID)(AWS_SECRET_ACCESS_KEY)
-const sqsClient: AWS.SQS = new AWS.SQS({ 
-  accessKeyId: config.awsConfig.accessKeyId,
-  secretAccessKey: config.awsConfig.secretAccessKey, 
+const sqsClient: AWS.SQS = new AWS.SQS({  
   region: config.awsConfig.region, 
   httpOptions: { agent } 
 });
@@ -100,5 +98,5 @@ async function pollAndDeleteMessagesFromSQS(handler: (data: AWS.SQS.Message)=> P
 
 export{
   pollAndDeleteMessagesFromSQS,
-  sqsClient
+  sqsClient,
 };
